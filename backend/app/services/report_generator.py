@@ -1,10 +1,20 @@
 import os
-from anthropic import Anthropic
 from dotenv import load_dotenv
 
 load_dotenv()
 
-client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+# Lazy initialization of Anthropic client
+_client = None
+
+def get_anthropic_client():
+    global _client
+    if _client is None:
+        api_key = os.getenv("ANTHROPIC_API_KEY")
+        if not api_key:
+            raise ValueError("ANTHROPIC_API_KEY environment variable not set")
+        from anthropic import Anthropic
+        _client = Anthropic(api_key=api_key)
+    return _client
 
 REPORT_SECTIONS = [
     "Investigation Summary",
@@ -92,6 +102,7 @@ Return the report as a JSON object with section names as keys and content as val
 """
 
     try:
+        client = get_anthropic_client()
         response = client.messages.create(
             model="claude-sonnet-4-20250514",
             max_tokens=4000,

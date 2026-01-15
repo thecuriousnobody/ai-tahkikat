@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Text, DateTime, Boolean, ForeignKey, JSON, ARRAY
+from sqlalchemy import Column, Integer, String, Text, DateTime, Boolean, ForeignKey, JSON
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from .database import Base
@@ -39,7 +39,7 @@ class Evidence(Base):
     source = Column(String(255))
     relevance = Column(Text)
     date_added = Column(DateTime(timezone=True), server_default=func.now())
-    linked_findings = Column(ARRAY(String), default=[])
+    linked_findings = Column(JSON, default=[])
 
     case = relationship("Case", back_populates="evidence")
 
@@ -54,7 +54,7 @@ class Interview(Base):
     interview_date = Column(DateTime)
     mode = Column(String(50))
     summary = Column(Text)
-    linked_evidence = Column(ARRAY(String), default=[])
+    linked_evidence = Column(JSON, default=[])
     is_management_explanation = Column(Boolean, default=False)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
@@ -82,7 +82,7 @@ class Finding(Base):
     case_id = Column(Integer, ForeignKey("cases.id", ondelete="CASCADE"))
     finding_id = Column(String(10), nullable=False)
     description = Column(Text, nullable=False)
-    evidence_ids = Column(ARRAY(String), nullable=False)
+    evidence_ids = Column(JSON, nullable=False)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
     case = relationship("Case", back_populates="findings")

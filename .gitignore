@@ -54,3 +54,6 @@ build/
 # Logs
 *.log
 logs/
+
+# Database
+*.db
