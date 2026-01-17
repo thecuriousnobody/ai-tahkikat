@@ -1,0 +1,61 @@
+# 🚀 COPY-PASTE THESE COMMANDS TO PUSH TO GITHUB
+
+## STEP 1: Create Repository on GitHub
+Go to: https://github.com/new
+- Repository name: investigation-platform
+- Public
+- Click "Create repository"
+
+Copy your repository URL (looks like):
+https://github.com/YOUR-USERNAME/investigation-platform.git
+
+## STEP 2: Open Terminal/Command Prompt
+Windows: Press Win+R, type "cmd", press Enter
+Mac: Press Cmd+Space, type "terminal", press Enter
+
+## STEP 3: Navigate to where you downloaded the file
+cd Downloads
+(or wherever you saved ABSOLUTE-FINAL-COMPLETE-PLATFORM.html)
+
+## STEP 4: Copy-Paste These Commands (ONE BY ONE)
+
+# Rename the file to index.html (GitHub Pages default)
+# Windows:
+ren ABSOLUTE-FINAL-COMPLETE-PLATFORM.html index.html
+
+# Mac/Linux:
+mv ABSOLUTE-FINAL-COMPLETE-PLATFORM.html index.html
+
+# Initialize git
+git init
+
+# Add the file
+git add index.html
+
+# Create a README
+echo "# Investigation Platform Prototype" > README.md
+git add README.md
+
+# Commit
+git commit -m "Initial commit - Investigation Platform"
+
+# Add your GitHub repository (REPLACE with YOUR URL)
+git remote add origin https://github.com/YOUR-USERNAME/investigation-platform.git
+
+# Push to GitHub
+git branch -M main
+git push -u origin main
+
+## DONE! ✅
+
+## STEP 5: Enable GitHub Pages
+1. Go to: https://github.com/YOUR-USERNAME/investigation-platform
+2. Click "Settings"
+3. Click "Pages" (left sidebar)
+4. Under "Source", select "main" branch
+5. Click "Save"
+
+Wait 1-2 minutes, then your site will be live at:
+https://YOUR-USERNAME.github.io/investigation-platform/
+
+Share this link with anyone!
