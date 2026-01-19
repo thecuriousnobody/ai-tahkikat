@@ -1,0 +1,72 @@
+# 🚀 PUSH MEGA SYSTEM TO GITHUB - 2 MINUTES
+
+## STEP 1: Download the File (10 seconds)
+Download: MEGA-FINAL-COMPLETE-SYSTEM.html
+
+## STEP 2: Create GitHub Repo (30 seconds)
+Go to: https://github.com/new
+- Repository name: investigation-platform
+- Public
+- Click "Create repository"
+- Copy the URL: https://github.com/YOUR-USERNAME/investigation-platform.git
+
+## STEP 3: Open Terminal/Command Prompt
+Windows: Press Win+R, type "cmd", Enter
+Mac: Press Cmd+Space, type "terminal", Enter
+
+## STEP 4: Run These Commands (Copy-Paste)
+
+# Navigate to Downloads folder
+cd Downloads
+
+# Rename file to index.html
+# Windows:
+ren MEGA-FINAL-COMPLETE-SYSTEM.html index.html
+
+# Mac/Linux:
+mv MEGA-FINAL-COMPLETE-SYSTEM.html index.html
+
+# Initialize git
+git init
+
+# Add file
+git add index.html
+
+# Create README
+echo "# Investigation Platform - Complete System" > README.md
+git add README.md
+
+# Commit
+git commit -m "Initial commit - Complete Investigation Platform"
+
+# Add your GitHub repo (REPLACE WITH YOUR URL)
+git remote add origin https://github.com/YOUR-USERNAME/investigation-platform.git
+
+# Push to GitHub
+git branch -M main
+git push -u origin main
+
+## STEP 5: Enable GitHub Pages (30 seconds)
+1. Go to: https://github.com/YOUR-USERNAME/investigation-platform
+2. Click "Settings"
+3. Click "Pages" (left sidebar)
+4. Under "Source", select "main" branch
+5. Click "Save"
+
+## ✅ YOUR SITE WILL BE LIVE IN 1-2 MINUTES AT:
+https://YOUR-USERNAME.github.io/investigation-platform/
+
+## 📧 SEND TO CLIENT:
+Hi Team,
+
+UAT link for Investigation Platform:
+🔗 https://YOUR-USERNAME.github.io/investigation-platform/
+
+Test:
+- Client Portal → Department User (Case Initiation)
+- Client Portal → Dashboard (Analytics)
+- Admin Panel (Platform Overview)
+
+All exports working (Excel + PowerPoint)
+
+Feedback by [DATE] please.
